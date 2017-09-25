@@ -23,9 +23,9 @@ app.use((req, res, next) => {
 })
 
 // For maintenance
-app.use((req, res, next) => {
-  res.render('maintenance.hbs');
-})
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs');
+// })
 
 app.use(express.static(__dirname + '/public'));
 // Register some helpers for hbs
