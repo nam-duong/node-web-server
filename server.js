@@ -4,6 +4,7 @@ const fs = require('fs');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
 
 // Tell Express that we want to use partial for Handlebars
 hbs.registerPartials(__dirname + '/views/partials');
@@ -55,7 +56,7 @@ app.get('/bad', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-  console.log('App listening on port 3000!');
+app.listen(port, () => {
+  console.log(`App listening on port ${port}!`);
 });
 
